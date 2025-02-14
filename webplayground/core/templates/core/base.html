@@ -33,8 +33,12 @@
             </ul>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/admin/">
-                  
+                <a class="nav-link" href="/admin">
+                  {% if user.is_staff %}
+                    Admin
+                  {% else %}
+                    Acceder
+                  {% endif %}
                 </a>
               </li>
             </ul>
